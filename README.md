@@ -21,9 +21,9 @@ Players can carry nearby players with multiple carry styles and optional UI/targ
 
 1. Clone into your resources folder:
 ```bash
-git clone https://github.com/mattibat/bat_carrypeople.git
+git clone https://github.com/batchcore-systems/bat_carrypeople.git
 ```
-Or simply click here: [Download Latest Version](https://github.com/mattibat/bat_carrypeople/archive/refs/heads/main.zip)
+Or simply click here: [Download Latest Version](https://github.com/batchcore-systems/bat_carrypeople/archive/refs/heads/main.zip)
 
 2. Add to your server.cfg:
 ```cfg
