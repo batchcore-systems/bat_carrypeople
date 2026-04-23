@@ -85,7 +85,9 @@ local function hasAdminPermission(sourceId)
     if GetResourceState('qb-core') == 'started' then
         local qb = getQb()
         if qb and qb.Functions and qb.Functions.HasPermission then
-            return qb.Functions.HasPermission(sourceId, Config.Admin.Permission or 'admin')
+            if qb.Functions.HasPermission(sourceId, Config.Admin.Permission or 'admin') then
+                return true
+            end
         end
     end
 
@@ -96,7 +98,9 @@ local function hasAdminPermission(sourceId)
             if xPlayer and xPlayer.getGroup then
                 local group = xPlayer.getGroup()
                 local allowedGroups = Config.Admin.EsxGroups or { 'admin', 'superadmin' }
-                return containsValue(allowedGroups, group)
+                if containsValue(allowedGroups, group) then
+                    return true
+                end
             end
         end
     end
